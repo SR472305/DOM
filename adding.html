@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let h1_tag = document.createElement("h1");
+    h1_tag.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, laudantium."
+    console.log(h1_tag);
+
+
+   let body = document.getElementsByTagName("body")[0];
+
+   body.appendChild(h1_tag);
+
+//    body.removeChild(h1_tag);
+
+//    document.replaceChild(new, old)
+let h1 = document.createElement("div");
+h1.innerText = "html";
+h1.style.backgroundColor = "pink";
+h1.setAttribute("class","test");
+
+body.replaceChild(h1,h1_tag)
+</script>
+</html>

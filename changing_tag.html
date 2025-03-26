@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing element</title>
+    <style>
+        .update {
+            border: 1px solid black;
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hello js...</h1>
+
+    <p class="value">Lorem ipsum dolor sit amet consectetur.</p>
+
+    <img calss="picture" height="200" width="200"
+        src="https://plus.unsplash.com/premium_photo-1667754184973-b36396448a0f?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="">
+</body>
+<script>
+    let add_element = document.getElementsByClassName("value")[0];
+
+    // add_element.style.backgroundcolor="gray";
+    add_element.setAttribute("class", "update");
+    console.log(add_element);
+
+
+    let tags = document.getElementsByTagName("h1")[0];
+    tags.style.backgroundColor = "yellow";
+    console.log("tags");
+
+
+    let photo = document.getElementsByClassName("picture")[0];
+    photo.src = "https://plus.unsplash.com/premium_photo-1663946192023-766bc713ea0f?q=80&w=1550&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+       console.log(photo);
+
+</script>
+
+</html>
