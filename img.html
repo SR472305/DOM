@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img class = "picture" height="300" width="300" src="https://images.unsplash.com/photo-1742426426875-4c16b5f4e95e?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="">
+
+        <button onclick = (Add_photo())>change the photo</button>
+</body>
+<script>
+ 
+    let hide = false;   
+    let x = document.getElementsByClassName("")
+    function Add_photo (){
+        let x = document.getElementsByClassName("picture")[0];
+        x.src="https://images.unsplash.com/photo-1741850826386-9cb8e5543c73?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        console.log(x);
+      
+    if(hide){
+        // document.getElementsByClassName("picture")[0];
+        x.src="https://images.unsplash.com/photo-1741850826386-9cb8e5543c73?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        hide = false;
+        console.log(hide);
+        
+    }
+    else {
+        // document.getElementsByClassName("picture")[0];
+        x.src=  src="https://images.unsplash.com/photo-1742426426875-4c16b5f4e95e?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          hide = true;
+          console.log(hide);
+          
+    }
+    }
+    
+    
+</script>
+</html>
