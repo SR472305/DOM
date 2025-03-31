@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button class="login"   onclick="loginfunction()">login</button>
+    <button class="showuser" onclick="userfunction()">showuser</button>
+    <button class="logout">logout</button>
+
+
+    <!-- <div id="message" style="display: none;">
+        <p>login succesfully......</p>
+
+    </div> -->
+
+    <div id="detail" style="display: none;" onclick="userfunction()">
+        <h2>user identity</h2>
+        <span>user id :- user1235 </span>
+        <span>email id :- user@12345</span>
+    </div>
+    
+</body>
+<script>
+    let  a = document.getElementsByClassName("login")[0];
+    let b =document.getElementsByClassName("showuser")[0];
+    let c = document.getElementsByClassName("logout")[0];
+    // let d = document.getElementById("message")[0];
+    
+    function loginfunction(){
+      a.style.display = "none";
+      let message = document.createElement("h1");
+      message.innerText = "login sucessfully...";
+      console.log(message);
+      let view  = document.getElementsByTagName("body")[0];
+      view.appendChild(message);
+      
+      b.style.display ="inline-block";
+      c.style.display = "inline - block";
+    //   d.style.display = "block";
+    }
+
+function userfunction(){
+// //    b.style.display = "none";
+//    let message_2 = document.createElement("p");
+//    message_2.innerText = "user name = shyam123";
+//    console.log(message_2);
+   
+//    message_2.innerText ="email = shyam@123";
+//    console.log(message_2);
+
+//    let view_2 = document.getElementsByTagName("body")[0];
+//    view_2.appendChild(message_2);
+   
+//    c.style.display = "inline-block";
+   
+   a.style.display = "none";
+   b.style.display = "none";
+   c.style.display = "block ";
+//    message.style.display = "none";
+
+
+   let message_2 = document.getElementsByTagName("h1");
+   message_2.innerHTML = "user :- shyam <br> Email id :- shyam@123";
+   console.log(message_2);
+
+   let view_2 = document.getElementsByTagName("body")[0];
+   view_2.appendChild(message_2);
+   
+   
+}
+
+    
+</script>
+</html>
