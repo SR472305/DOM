@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        #heading {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 3rem;
+            padding-left: 1rem;
+            padding-right: 2rem;
+            border: 1px solid black;
+            background: linear-gradient(white, green);
+            height: 5rem;
+            width: 100%;
+        }
+
+        .link {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+
+        }
+
+        .menu{
+            display: none;
+        }
+
+        @media screen and (max-width:1024px) {
+            html {
+                font-size: 5px;
+            }
+
+            #heading {
+                font-size: 8rem;
+                background: linear-gradient(white, pink);
+                height: 10rem;
+            }
+
+            .logo {
+                color: blue;
+            }
+
+            ul li a {
+                color: black;
+                gap: 4rem;
+            }
+
+            .link {
+                display: none;
+                position: relative;
+                top: 12rem;
+                right: 90rem;
+                text-align: justify;
+                /* transform: translate(); */
+                /* left: -100%; */
+            }
+            .menu:hover .link{
+                    display: block;
+            }
+            .menu{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="heading">
+        <div class="logo">logo</div>
+
+        <ul class="link" id = "linl_2"  onclick="menu_section()">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">porject</a></li>
+            <li><a href="#">feedback</a></li>
+        </ul>
+
+        <div class="menu"  onclick="menu_section()">
+            <i class="fa-solid fa-bars"></i>
+        </div>   
+    </header>
+</body>
+<script>
+    let x = document.getElementsByClassName("menu")
+    let a =document.getElementById("linl_2");
+    function menu_section(){
+       a.style.display = "block";
+       
+       if(linl_2==none){
+        x.style.display = "block";
+       }
+       else{
+        x.style.display="none"
+       }
+    }
+</script>
+
+</html>
