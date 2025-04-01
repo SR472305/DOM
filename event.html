@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="fname" id="fname" placeholder="enter your name">
+        <small class="error" style="color: red;"></small> <br><br>
+        <input type="number " name="age" id="age" placeholder="enter your age"><br><br>
+        <small class="error" style="color: red;"></small> <br><br>
+
+        <button onclick="myfunction(event)">sumbit</button>
+    </form>
+</body>
+
+<script>
+    function myfunction(event){
+        event.preventDefault();
+
+        let name= document.getElementById("fname").value;
+        
+        let age = document.getElementById("age").value; 
+        console.log(name);
+        console.log(age);
+        
+
+        // if(name.length != 10){
+        //     console.log("true");
+            
+        // }
+        // else {
+        //     console.log("false");
+            
+        // }
+
+        let error1 = document.getElementsByClassName("error")[0];
+        let error2 = document.getElementsByClassName("error")[1];
+
+        if(name.length<6){
+            error1.innerHTML = "name is less than 6";
+        }
+
+        if(age<=18){
+            error2.innerHTML = "age is than 18";
+        }
+        
+    }
+</script>
+</html>
