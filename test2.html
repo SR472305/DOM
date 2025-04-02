@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset style="max-width: min-content;">
+             <h1>login form</h1>
+             
+                <label >First Name</label>
+                <input type="text" name="fname" id="fname" placeholder="First Name"><br>
+                <small  class= "error"   style="color: red;"></small><br><br>
+
+
+                <label >Last Name</label>
+                <input type="text" name="lname" id="lname" placeholder="Last Name"><br>
+                <small  class= "error"   style="color: red;"></small><br><br>
+
+                <label >Age</label>
+                <input type="number" name="age" id="age" placeholder="Age"><br>
+                <small  class= "error"   style="color: red;"></small><br><br>
+
+                <label>Contact</label>
+                <input type="number" name="contact" id="contact" placeholder="Contact"><br>
+                <small  class= "error"   style="color: red;"></small><br><br>
+
+                <label >Password</label>
+                <input type="password" name="password" id="password" placeholder="Password"><br>
+                <small  class= "error"   style="color: red;"></small><br><br>
+
+                <label >Confirm Password</label>
+                <input type="password" name="c password" id="confirm" placeholder="Confirm"> <br>
+                <small  class= "error"   style="color: red;"></small><br><br>
+             
+               <button onclick="myfunction(event)">Sumbit</button> 
+        </fieldset>
+    </form>
+</body>
+<script>
+  function myfunction(event){
+    event.preventDefault();
+
+    let name = document.getElementById("fname").value;
+    let last  = document.getElementById("lname").value;
+    let age = document.getElementById("age").value;
+    let contact = document.getElementById("contact").value;
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
+
+    console.log(name);
+    console.log(last);
+    console.log(age);
+    console.log(contact);
+    console.log(password);
+    console.log(confirm);
+    
+    
+    let error1 = document.getElementsByClassName("error")[0];
+    let error2 = document.getElementsByClassName("error")[1];
+    let error3 = document.getElementsByClassName("error")[2];
+    let error4 = document.getElementsByClassName("error")[3];
+    let error5 = document.getElementsByClassName("error")[4];
+    let error6 = document.getElementsByClassName("error")[5];
+    
+    if(name.length<=0){
+        error1.innerHTML=" please enter a name";
+    }
+    else{
+        error1.innerHTML="";
+    }
+
+    if(last.length<=0){
+        error2.innerHTML="please enter your last name"
+    }
+    else{
+        error2.innerHTML=""
+    }
+
+    if(age!==0){
+        error3.innerHTML="Age cannot be empty";
+    }
+    else if(age!=-1){
+        error3.innerHTML="Age cannot be negative"
+    }
+
+    else if ( age>100){
+        error3.innerHTML="You are in hell";
+    }
+
+    else{
+       error3.innerHTML=" "
+    }
+
+    if(contact=="") {
+       error4.innerHTML="please enter a contact number";
+    }
+    else if(contact.length!=10){
+        error4.innerHTML="please enter a 10 digit number";
+    }
+    // else if (contact <=10){
+    //     error4.innerHTML="contact number canot be more than zero";
+    // }
+
+    else{
+        error4.innerHTML= "";
+    }
+
+    if(password==0){
+        error5.innerHTML="please enter the password";
+    }
+    else{
+        error5.innerHTML="";
+    }
+
+
+    if(confirm==0){
+        error6.innerHTML="please enter the password";
+    }
+    else if (confirm.length!== password){
+        error6.innerHTML="invalid password";
+    }
+    else {
+        error6.innerHTML="";
+    }
+    
+}
+</script>
+    
+</body>
+</html>
