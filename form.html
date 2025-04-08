@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="enter your name"><br>
+        <input type="number" name="age" id="age" placeholder="enter your age"><br>
+
+        <button type="submit" onclick="formsubmit(event)">Submit</button>
+    </form>
+</body>
+<script>
+    let inputdata = {
+        name: "",
+        age: "",
+    }
+    
+    function formsubmit(event){   
+        event.preventDefault();
+        let stud_name = document.getElementById("name").value;
+        let stud_age = document.getElementById("age").value;
+        
+        inputdata.name = stud_name;
+        inputdata.age = stud_age;
+        
+        let array_data = [];
+        array_data.push(inputdata);
+        console.log(array_data);
+      
+      localStorage.setItem("inputdata",JSON.stringify(inputdata));
+    }
+
+    let data = localStorage.getItem("inputdata");
+
+    if(data) {
+        let student = JSON.parse(data)
+        console.log(student.name);
+        console.log(student.age);   
+    }  
+</script>
+
+</html>

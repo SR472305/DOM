@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>TITLE</td>
+                <td>STATUS</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    let todo = "https://jsonplaceholder.typicode.com/todos";
+
+    fetch(todo)
+    .then(function(response){
+        return response.json();
+    })
+
+    .then(function (data){
+        let body = document.getElementById("tbody");
+
+        let html = data.map(function  (value){
+            return `<tr>
+                       <td>${value.id}</td>
+                       <td>${value.title}</td>
+                       <td>${value.status}</td>            
+                </tr>`
+        });
+        body.innerHTML = html.join("");  
+
+        // if(status)
+    })
+</script>
+</html>
