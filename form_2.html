@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" name="contact"  id="contact" placeholder="contact" oninput="contact_no(event)"><br>
+        <small  class="error"  style="color: red;"></small><br>
+        <button type="submit" id="formbtn">Submit</button>
+
+        <button type="submit" id="loginbtn">login</button>
+    </form>
+</body>
+<script>
+    function contact_no(event){
+        // event.preventDefault();
+        // let no = document.getElementById("contact");
+
+        // // console.log(no);
+
+        // let error1 = document.getElementsByClassName("error")[0];
+        
+        // if(error1<11){
+        //     error1.innerHTML="contact must be 10 digit";
+        // }
+
+        // if(!error1>11){
+        //     error1.innerHTML="contact not more than 10 digit";
+        // }
+
+        // else{
+        //     error1.innerHTML="";
+        // }
+
+        console.log(event.target.value);
+
+        let contact =  event.target.value;
+        
+        if(contact.length < 10 || contact.length > 10){
+            document.getElementsByClassName("error")[0].innerHTML="invalid contact";
+        }
+
+        else{
+            document.getElementsByClassName("error")[0].innerHTML=""; 
+        }
+        
+    }
+
+    let form = document.getElementById("formbtn");
+     form.addEventListener("click" ,function() {
+         alert("form button  click")
+     })
+
+     let login = document.getElementById("loginbtn");
+     login.addEventListener("click",function(){
+        alert("login button click")
+     })
+    </script>
+</html>
